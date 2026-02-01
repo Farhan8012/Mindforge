@@ -31,7 +31,7 @@ export function AuthProvider({ children }) {
         // Listen for auth changes
         const {
             data: { subscription },
-        } = supabase.auth.onAuthStateChange(async (_event, session) => {
+        } = supabase.auth.onAuthStateChange(async (event, session) => {
             setSession(session)
             setUser(session?.user ?? null)
 
@@ -98,13 +98,6 @@ export function AuthProvider({ children }) {
         try {
             const { data, error } = await supabase.auth.signInWithOAuth({
                 provider: 'google',
-                options: {
-                    redirectTo: `${window.location.origin}/`,
-                    queryParams: {
-                        access_type: 'offline',
-                        prompt: 'consent',
-                    },
-                },
             })
 
             if (error) throw error
