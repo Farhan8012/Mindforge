@@ -223,6 +223,38 @@ export const syllabusData = {
                 subtopics: ["Ultrasound", "Doppler in Medicine", "Hearing Range", "Acoustic Impedance"],
                 description: "Acoustics in medical applications"
             }
+        ],
+        "Undergraduate": [
+            {
+                chapterName: "Classical Mechanics",
+                subtopics: ["Lagrangian Mechanics", "Hamiltonian Mechanics", "Central Force Motion", "Rigid Body Dynamics", "Normal Modes"],
+                description: "Advanced classical mechanics for undergraduates"
+            },
+            {
+                chapterName: "Electromagnetism",
+                subtopics: ["Maxwell's Equations", "Electromagnetic Waves", "Waveguides", "Radiation Theory", "Special Relativity"],
+                description: "Comprehensive electromagnetic theory"
+            },
+            {
+                chapterName: "Quantum Mechanics",
+                subtopics: ["Wave Functions", "Schrödinger Equation", "Operators", "Hydrogen Atom", "Perturbation Theory"],
+                description: "Introduction to quantum mechanics"
+            },
+            {
+                chapterName: "Thermodynamics and Statistical Mechanics",
+                subtopics: ["Laws of Thermodynamics", "Statistical Ensembles", "Partition Functions", "Phase Transitions", "Kinetic Theory"],
+                description: "Thermal physics and statistical methods"
+            },
+            {
+                chapterName: "Optics and Waves",
+                subtopics: ["Wave Optics", "Interference", "Diffraction", "Polarization", "Fourier Optics", "Lasers"],
+                description: "Advanced optics and wave phenomena"
+            },
+            {
+                chapterName: "Modern Physics",
+                subtopics: ["Atomic Physics", "Nuclear Physics", "Particle Physics", "Solid State Physics", "Condensed Matter"],
+                description: "Contemporary physics topics"
+            }
         ]
     },
     Chemistry: {
@@ -386,6 +418,33 @@ export const syllabusData = {
                 chapterName: "Advanced Physical Chemistry",
                 subtopics: ["Quantum Chemistry", "Statistical Thermodynamics", "Electrochemistry Advanced"],
                 description: "Mathematical aspects of chemistry"
+            }
+        ],
+        "Undergraduate": [
+            {
+                chapterName: "Organic Chemistry Advanced",
+                subtopics: ["Reaction Mechanisms", "Spectroscopy", "Retrosynthesis", "Organometallics", "Natural Products"],
+                description: "Advanced organic chemistry for undergraduates"
+            },
+            {
+                chapterName: "Inorganic Chemistry",
+                subtopics: ["Coordination Chemistry", "Organometallic Chemistry", "Bioinorganic Chemistry", "Solid State Chemistry"],
+                description: "Comprehensive inorganic chemistry"
+            },
+            {
+                chapterName: "Physical Chemistry",
+                subtopics: ["Quantum Chemistry", "Statistical Thermodynamics", "Chemical Kinetics", "Electrochemistry", "Surface Chemistry"],
+                description: "Theoretical and physical chemistry"
+            },
+            {
+                chapterName: "Analytical Chemistry",
+                subtopics: ["Chromatography", "Spectroscopic Methods", "Mass Spectrometry", "Electroanalytical Methods"],
+                description: "Modern analytical techniques"
+            },
+            {
+                chapterName: "Biochemistry",
+                subtopics: ["Protein Structure", "Enzyme Kinetics", "Metabolism", "Molecular Biology", "Bioenergetics"],
+                description: "Chemistry of biological systems"
             }
         ]
     },
@@ -621,6 +680,48 @@ export const syllabusData = {
                 subtopics: ["Vector Triple Product", "Coplanarity", "Shortest Distance"],
                 description: "Advanced 3D geometry"
             }
+        ],
+        "Undergraduate": [
+            {
+                chapterName: "Real Analysis",
+                subtopics: ["Sequences and Series", "Continuity", "Differentiation", "Riemann Integration", "Metric Spaces"],
+                description: "Rigorous calculus and analysis"
+            },
+            {
+                chapterName: "Linear Algebra",
+                subtopics: ["Vector Spaces", "Linear Transformations", "Eigenvalues", "Inner Product Spaces", "Canonical Forms"],
+                description: "Abstract linear algebra"
+            },
+            {
+                chapterName: "Abstract Algebra",
+                subtopics: ["Groups", "Rings", "Fields", "Galois Theory", "Modules"],
+                description: "Algebraic structures and theory"
+            },
+            {
+                chapterName: "Differential Equations",
+                subtopics: ["ODEs", "PDEs", "Boundary Value Problems", "Fourier Series", "Laplace Transforms"],
+                description: "Theory and applications of differential equations"
+            },
+            {
+                chapterName: "Complex Analysis",
+                subtopics: ["Analytic Functions", "Cauchy's Theorem", "Residue Theory", "Conformal Mapping"],
+                description: "Functions of complex variables"
+            },
+            {
+                chapterName: "Topology",
+                subtopics: ["Topological Spaces", "Continuity", "Compactness", "Connectedness", "Homotopy"],
+                description: "Introduction to topology"
+            },
+            {
+                chapterName: "Probability and Statistics",
+                subtopics: ["Probability Theory", "Random Variables", "Distributions", "Statistical Inference", "Hypothesis Testing"],
+                description: "Mathematical statistics and probability"
+            },
+            {
+                chapterName: "Numerical Methods",
+                subtopics: ["Numerical Integration", "Root Finding", "Interpolation", "Numerical Linear Algebra"],
+                description: "Computational mathematics"
+            }
         ]
     },
     Biology: {
@@ -788,6 +889,48 @@ export const syllabusData = {
                 subtopics: ["Mendelian Genetics", "Molecular Genetics", "Evolution Evidence", "Hardy-Weinberg"],
                 description: "Genetics for medical entrance"
             }
+        ],
+        "Undergraduate": [
+            {
+                chapterName: "Cell and Molecular Biology",
+                subtopics: ["Cell Structure", "Membrane Biology", "Signal Transduction", "Gene Expression", "Protein Synthesis"],
+                description: "Advanced cell biology and molecular mechanisms"
+            },
+            {
+                chapterName: "Genetics and Genomics",
+                subtopics: ["Mendelian Genetics", "Molecular Genetics", "Population Genetics", "Genomics", "Bioinformatics"],
+                description: "Comprehensive genetics and modern genomics"
+            },
+            {
+                chapterName: "Biochemistry",
+                subtopics: ["Biomolecules", "Metabolism", "Enzyme Kinetics", "Bioenergetics", "Metabolic Regulation"],
+                description: "Chemistry of living systems"
+            },
+            {
+                chapterName: "Microbiology",
+                subtopics: ["Bacterial Physiology", "Virology", "Immunology", "Microbial Genetics", "Applied Microbiology"],
+                description: "Study of microorganisms"
+            },
+            {
+                chapterName: "Ecology and Evolution",
+                subtopics: ["Population Ecology", "Community Ecology", "Ecosystem Dynamics", "Evolutionary Theory", "Conservation Biology"],
+                description: "Ecological principles and evolutionary biology"
+            },
+            {
+                chapterName: "Developmental Biology",
+                subtopics: ["Embryology", "Cell Differentiation", "Morphogenesis", "Pattern Formation", "Stem Cells"],
+                description: "Development from fertilization to adult"
+            },
+            {
+                chapterName: "Physiology",
+                subtopics: ["Neurophysiology", "Cardiovascular Physiology", "Respiratory Physiology", "Endocrinology", "Homeostasis"],
+                description: "Function of organ systems"
+            },
+            {
+                chapterName: "Biotechnology",
+                subtopics: ["Recombinant DNA Technology", "Genetic Engineering", "Bioprocessing", "Bioinformatics", "Applications"],
+                description: "Modern biotechnology and applications"
+            }
         ]
     }
 }
@@ -799,7 +942,8 @@ export const levels = [
     { id: 'class-12', name: 'Class 12', icon: '🎓', description: 'Board exam preparation' },
     { id: 'jee-main', name: 'JEE Main', icon: '🚀', description: 'Engineering entrance preparation' },
     { id: 'jee-advanced', name: 'JEE Advanced', icon: '⚡', description: 'Advanced engineering entrance' },
-    { id: 'neet', name: 'NEET', icon: '🏥', description: 'Medical entrance preparation' }
+    { id: 'neet', name: 'NEET', icon: '🏥', description: 'Medical entrance preparation' },
+    { id: 'undergraduate', name: 'Undergraduate', icon: '🎓', description: 'University undergraduate level' }
 ]
 
 export const subjects = [
@@ -885,7 +1029,8 @@ export function getChaptersForLevel(subject, level) {
         'class-12': 'Class 12',
         'jee-main': 'JEE Main',
         'jee-advanced': 'JEE Advanced',
-        'neet': 'NEET'
+        'neet': 'NEET',
+        'undergraduate': 'Undergraduate'
     }
 
     const levelKey = levelMap[level] || level
