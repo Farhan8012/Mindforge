@@ -179,7 +179,7 @@ export default function LandingPage() {
                     initial={{ opacity: 0, y: 30 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.4 }}
-                    className={`font-display font-bold mb-6 max-w-4xl ${activeSection ? 'text-3xl md:text-4xl' : 'text-4xl md:text-6xl lg:text-7xl'}`}
+                    className={`font-display font-bold mb-6 max-w-4xl relative z-20 ${activeSection ? 'text-3xl md:text-4xl' : 'text-4xl md:text-6xl lg:text-7xl'}`}
                 >
                     <span className="text-white">Learn from</span>
                     <br />
@@ -191,7 +191,7 @@ export default function LandingPage() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ duration: 0.8, delay: 0.6 }}
-                    className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed"
+                    className="text-gray-400 text-lg md:text-xl max-w-2xl mb-10 leading-relaxed relative z-20"
                 >
                     Experience personalized AI tutoring with legendary figures like Einstein,
                     Ramanujan, and Kalam. Master JEE, NEET, and Board exams with adaptive

@@ -78,35 +78,93 @@ export default function OnboardingPage() {
             {/* Progress Bar */}
             <div className="relative z-10 px-8 md:px-16 mt-4">
                 <div className="max-w-3xl mx-auto">
+                    {/* Progress steps with full-width connectors */}
                     <div className="flex items-center justify-between mb-2">
                         {steps.map((step, index) => (
-                            <div key={step.id} className="flex items-center">
-                                <div className={`
-                  w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-all
-                  ${currentStep >= step.id
-                                        ? 'bg-gradient-to-br from-primary-500 to-primary-700 text-white'
-                                        : 'bg-dark-700 text-gray-500'
-                                    }
-                `}>
-                                    {currentStep > step.id ? '✓' : step.id}
-                                </div>
+                            <div key={step.id} className="flex items-center flex-1 last:flex-none">
+                                {/* Step circle */}
+                                <motion.div
+                                    initial={{ scale: 0.8, opacity: 0 }}
+                                    animate={{ scale: 1, opacity: 1 }}
+                                    transition={{ delay: index * 0.1, duration: 0.3 }}
+                                    className={`
+                                        w-10 h-10 rounded-full flex items-center justify-center text-sm font-medium transition-all relative
+                                        ${currentStep >= step.id
+                                            ? 'bg-gradient-to-br from-primary-500 to-primary-700 text-white shadow-lg shadow-primary-500/30'
+                                            : 'bg-dark-700 text-gray-500 border border-gray-700'
+                                        }
+                                    `}
+                                >
+                                    {currentStep > step.id ? (
+                                        <motion.span
+                                            initial={{ scale: 0 }}
+                                            animate={{ scale: 1 }}
+                                            className="text-white"
+                                        >
+                                            ✓
+                                        </motion.span>
+                                    ) : (
+                                        step.id
+                                    )}
+
+                                    {/* Pulse effect for current step */}
+                                    {currentStep === step.id && (
+                                        <motion.div
+                                            className="absolute inset-0 rounded-full bg-primary-500"
+                                            initial={{ opacity: 0.5, scale: 1 }}
+                                            animate={{ opacity: 0, scale: 1.5 }}
+                                            transition={{ duration: 1.5, repeat: Infinity }}
+                                        />
+                                    )}
+                                </motion.div>
+
+                                {/* Connecting line (not on last step) */}
                                 {index < steps.length - 1 && (
-                                    <div className={`
-                    w-24 md:w-32 h-1 mx-2 rounded-full transition-all
-                    ${currentStep > step.id ? 'bg-primary-500' : 'bg-dark-700'}
-                  `} />
+                                    <div className="flex-1 h-1 mx-3 bg-dark-700 rounded-full overflow-hidden relative">
+                                        {/* Filled portion of the line */}
+                                        <motion.div
+                                            className="h-full bg-gradient-to-r from-primary-500 to-primary-600 rounded-full"
+                                            initial={{ width: '0%' }}
+                                            animate={{
+                                                width: currentStep > step.id ? '100%' : '0%'
+                                            }}
+                                            transition={{ duration: 0.5, ease: 'easeInOut' }}
+                                        />
+
+                                        {/* Animated glow on active line */}
+                                        {currentStep > step.id && (
+                                            <motion.div
+                                                className="absolute inset-0 bg-gradient-to-r from-transparent via-primary-400/50 to-transparent"
+                                                initial={{ x: '-100%' }}
+                                                animate={{ x: '100%' }}
+                                                transition={{
+                                                    duration: 2,
+                                                    repeat: Infinity,
+                                                    ease: 'linear'
+                                                }}
+                                            />
+                                        )}
+                                    </div>
                                 )}
                             </div>
                         ))}
                     </div>
+
+                    {/* Step labels */}
                     <div className="flex justify-between text-sm">
-                        {steps.map(step => (
-                            <span
+                        {steps.map((step, index) => (
+                            <motion.span
                                 key={step.id}
-                                className={currentStep >= step.id ? 'text-white' : 'text-gray-500'}
+                                initial={{ opacity: 0, y: 5 }}
+                                animate={{ opacity: 1, y: 0 }}
+                                transition={{ delay: index * 0.1 + 0.2 }}
+                                className={`
+                                    transition-colors duration-300
+                                    ${currentStep >= step.id ? 'text-white font-medium' : 'text-gray-500'}
+                                `}
                             >
                                 {step.title}
-                            </span>
+                            </motion.span>
                         ))}
                     </div>
                 </div>

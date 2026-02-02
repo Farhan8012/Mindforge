@@ -26,21 +26,67 @@ export default function PreferencesForm() {
                     {learningStyles.map((style, index) => (
                         <motion.button
                             key={style.id}
-                            initial={{ opacity: 0, y: 10 }}
+                            initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
-                            transition={{ duration: 0.3, delay: index * 0.1 }}
+                            transition={{ duration: 0.4, delay: index * 0.12 }}
+                            whileHover={{ y: -4, transition: { duration: 0.2 } }}
                             onClick={() => updatePreferences({ learningStyle: style.id })}
                             className={`
-                p-5 rounded-xl text-left transition-all
+                preference-card p-5 rounded-xl text-left transition-all relative overflow-hidden
                 ${userPreferences.learningStyle === style.id
-                                    ? 'bg-gradient-to-r from-primary-500/20 to-primary-700/20 border-2 border-primary-500'
-                                    : 'glass-card'
+                                    ? 'bg-gradient-to-r from-primary-500/20 to-primary-700/20 border-2 border-primary-500 shadow-lg shadow-primary-500/20'
+                                    : 'glass-card hover:border-primary-500/50'
                                 }
               `}
                         >
-                            <span className="text-3xl">{style.icon}</span>
-                            <h4 className="font-semibold text-white mt-3 mb-1">{style.name}</h4>
-                            <p className="text-gray-400 text-sm">{style.description}</p>
+                            {/* Floating bubble particles inside card */}
+                            <div className="bubble-particles">
+                                <div
+                                    className="bubble-particle"
+                                    style={{
+                                        width: '30px',
+                                        height: '30px',
+                                        bottom: '10px',
+                                        left: '20%',
+                                        animationDelay: `${index * 0.5}s`
+                                    }}
+                                />
+                                <div
+                                    className="bubble-particle"
+                                    style={{
+                                        width: '20px',
+                                        height: '20px',
+                                        bottom: '5px',
+                                        right: '25%',
+                                        animationDelay: `${index * 0.3 + 0.5}s`
+                                    }}
+                                />
+                                <div
+                                    className="bubble-particle"
+                                    style={{
+                                        width: '15px',
+                                        height: '15px',
+                                        bottom: '15px',
+                                        left: '60%',
+                                        animationDelay: `${index * 0.4 + 1}s`
+                                    }}
+                                />
+                            </div>
+
+                            {/* Card content */}
+                            <span className="text-3xl relative z-10">{style.icon}</span>
+                            <h4 className="font-semibold text-white mt-3 mb-1 relative z-10">{style.name}</h4>
+                            <p className="text-gray-400 text-sm relative z-10">{style.description}</p>
+
+                            {/* Selected glow effect */}
+                            {userPreferences.learningStyle === style.id && (
+                                <motion.div
+                                    layoutId="selectedGlow"
+                                    className="absolute inset-0 bg-gradient-to-t from-primary-500/10 to-transparent pointer-events-none"
+                                    initial={{ opacity: 0 }}
+                                    animate={{ opacity: 1 }}
+                                />
+                            )}
                         </motion.button>
                     ))}
                 </div>
